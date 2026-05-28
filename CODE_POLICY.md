@@ -54,6 +54,12 @@ Rules:
 Every change goes through a PR — no exceptions, including small fixes.
 One logical change per PR. Keep scope tight.
 
+### Large PRs
+A PR is considered large if it touches more than ~500 lines or crosses module boundaries.
+Large PRs must be discussed and agreed upon before work starts — open a GitHub Issue,
+describe the change and its scope, and get required reviewer sign-off on the approach.
+PRs opened without prior discussion may be closed and sent back to the issue stage.
+
 ### Required to merge
 
 | Target | Approvals | CI |

@@ -18,4 +18,4 @@ The system currently fuses two independent passive sensing modalities: solar pol
 
 ## Standards
 
-All development standards — branching, pull requests, code style, commit messages, secrets policy, and module contracts — are defined in [CODE_POLICY.md](CODE_POLICY.md).
+All development standards — branching, pull requests, code style, commit messages, secrets policy, and module contracts — are defined in [CODE_POLICY.md](../CODE_POLICY.md).

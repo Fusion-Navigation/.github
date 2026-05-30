@@ -199,11 +199,15 @@ Adding a new sensor module:
 
 All checks run in GitHub Actions on every PR. Nothing is enforced locally.
 
-| Check | Tool | What it catches |
-|---|---|---|
-| Lint | `ruff check` | unused imports, undefined names, naming violations |
-| Format | `ruff format --check` | quotes, line length, formatting drift |
-| PR validation | custom checks | description sections present, commit message format, branch name |
-| Tests | `pytest` | regressions — runs only if `tests/` exists in the repo |
+| Check | Tool | Applies to | What it catches |
+|---|---|---|---|
+| Lint | `ruff check` | Python repos | unused imports, undefined names, naming violations |
+| Format | `ruff format --check` | Python repos | quotes, line length, formatting drift |
+| Lint | `eslint` | `fnav-ui` | unused vars, undefined names |
+| Format | `prettier --check` | `fnav-ui` | line length, quotes, formatting drift |
+| Lint | `swiftlint` | `fnav-data-capture` | Swift style and correctness |
+| Lint | `ktlint` | `fnav-data-capture` | Kotlin style and correctness |
+| PR validation | custom checks | all repos | description sections present, commit message format, branch name |
+| Tests | `pytest` | Python repos | regressions — runs only if `tests/` exists in the repo |
 
 CI config lives in `.github/workflows/`. Do not modify CI files without required reviewer approval.

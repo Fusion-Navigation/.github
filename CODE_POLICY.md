@@ -10,10 +10,9 @@ All contributors are expected to follow these rules without exception.
 | Repository | Team | Purpose |
 |---|---|---|
 | `fnav-core` | core | Shared interfaces, EKF, nav state models — **RPi-only code** |
-| `fnav-polarization` | sensors | Polarization compass module |
-| `fnav-star-tracker` | sensors | Star tracker module |
-| `fnav-vio` | vision | Visual odometry / VIO |
-| `fnav-firmware` | embedded | RPi OS image, HAL, module composition, deployment |
+| `fnav-lab` | core | Navigation pipeline R&D: algorithms, visualizations, data processing, and tests |
+| `fnav-solar` | sensors | Polarization compass module |
+| `fnav-stellar` | sensors | Celestial navigation: CNN constellation classifier + star-based position estimation |
 | `fnav-data-capture` | mobile | Mobile sensor capture app |
 | `fnav-ui` | frontend | Ground station / demo UI |
 
@@ -21,12 +20,12 @@ All contributors are expected to follow these rules without exception.
 
 `fnav-core` contains **only what runs on the RPi**: shared interfaces, data models, and the EKF core.
 No tests, no scripts, no simulation utilities, no tooling — nothing that is not deployed to hardware.
-Tests for core logic live in the module repos that use it.
+Tests for core logic live in `fnav-lab`.
 
 ### Module distribution
 
-Each module (`fnav-polarization`, `fnav-star-tracker`, `fnav-vio`) is published as a private Python
-package to GitHub Packages. `fnav-firmware` imports them as versioned dependencies. Module repos
+Each module (`fnav-solar`, `fnav-stellar`) is published as a private Python
+package to GitHub Packages. `fnav-core` imports them as versioned dependencies. Module repos
 never import from each other directly.
 
 ---

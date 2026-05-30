@@ -63,7 +63,7 @@ PRs opened without prior discussion may be closed and sent back to the issue sta
 
 | Target | Approvals | CI |
 |---|---|---|
-| `main` | required reviewer (see CODEOWNERS) | all checks green |
+| `main` | required reviewer | all checks green |
 | `dev` | required reviewer | all checks green |
 
 - Squash merge only — keeps history readable

@@ -102,7 +102,7 @@ ruff check .
 |---|---|
 | `F401` | unused imports |
 | `F821` | undefined names (typos, missing imports) |
-| `N` | naming convention violations |
+| `N` (except N806, N803) | naming violations — classes and functions; N806/N803 ignored to allow uppercase math variables (`K`, `F`, `Rz`, etc.) |
 
 No import order rules enforced.
 
@@ -165,10 +165,9 @@ Rules:
 
 ## 6. Secrets and Credentials
 
-Zero tolerance. No API keys, passwords, hardware serials, AWS credentials, or key material in code.
+Zero tolerance. No API keys, passwords, hardware serials, AWS credentials, or key material in code. Ever.
 
 - Use `.env` files locally; `.env` is always in `.gitignore`
-- `detect-secrets` runs in CI on every PR — any detected credential blocks the merge
 - If a secret is accidentally committed: treat it as compromised immediately, rotate it,
   then remove it from history with `git filter-repo`
 
@@ -204,8 +203,7 @@ All checks run in GitHub Actions on every PR. Nothing is enforced locally.
 |---|---|---|
 | Lint | `ruff check` | unused imports, undefined names, naming violations |
 | Format | `ruff format --check` | quotes, line length, formatting drift |
-| Secrets | `detect-secrets` | committed credentials |
-| PR validation | `action/validate-pr` | description sections present, commit message format, branch name |
+| PR validation | custom checks | description sections present, commit message format, branch name |
 | Tests | `pytest` | regressions — runs only if `tests/` exists in the repo |
 
 CI config lives in `.github/workflows/`. Do not modify CI files without required reviewer approval.

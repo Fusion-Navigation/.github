@@ -8,13 +8,13 @@ The system currently fuses two independent passive sensing modalities: solar pol
 
 | Repository | Description |
 |---|---|
-| [`fnav-core`](../fnav-core) | Shared interfaces, EKF core, and navigation state models — RPi-only |
-| [`fnav-lab`](../fnav-lab) | Navigation pipeline R&D: algorithms, visualizations, data processing, and tests |
-| [`fnav-solar`](../fnav-solar) | Polarization compass module: sky polarization-based heading estimation |
-| [`fnav-stellar`](../fnav-stellar) | GPS-denied celestial navigation: CNN constellation classifier + star-based position estimation |
-| [`fnav-data-capture`](../fnav-data-capture) | Mobile app for onboard sensor data capture |
-| [`fnav-ui`](../fnav-ui) | Ground station and demo UI |
-| [`.github`](..) | Org-wide code policy, contributing guidelines, and PR templates |
+| [`fnav-core`](https://Fusion-Navigation/fnav-core) | Shared interfaces, EKF core, and navigation state models — RPi-only |
+| [`fnav-lab`](https://Fusion-Navigation/fnav-lab) | Navigation pipeline R&D: algorithms, visualizations, data processing, and tests |
+| [`fnav-solar`](https://Fusion-Navigation/fnav-solar) | Polarization compass module: sky polarization-based heading estimation |
+| [`fnav-stellar`](https://Fusion-Navigation/fnav-stellar) | GPS-denied celestial navigation: CNN constellation classifier + star-based position estimation |
+| [`fnav-data-capture`](https://Fusion-Navigation/fnav-data-capture) | Mobile app for onboard sensor data capture |
+| [`fnav-ui`](https://Fusion-Navigation/fnav-ui) | Ground station and demo UI |
+| [`.github`](https://Fusion-Navigation/.github) | Org-wide code policy, contributing guidelines, and PR templates |
 
 ## Standards
 
